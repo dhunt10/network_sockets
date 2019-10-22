@@ -15,24 +15,25 @@ if __name__ == '__main__':
         server_resp = client_connect.recv(2048).decode("utf8");
         results = server_resp.split()
 
+        print(results)
         try:
             CLASS = results[0]
             STATUS = results[1]
-            FIRST_NUMBER = results[2]
+            FIRST_NUMBER = int(results[2])
             OP = results[3]
-            SECOND_NUMBER = results[4]
+            SECOND_NUMBER = int(results[4])
             if OP == '-':
-                NUMBER_MESSAGE = int(FIRST_NUMBER) - int(SECOND_NUMBER)
+                NUMBER_MESSAGE = FIRST_NUMBER - SECOND_NUMBER
             elif OP == '+':
-                NUMBER_MESSAGE = int(FIRST_NUMBER) + int(SECOND_NUMBER)
+                NUMBER_MESSAGE = FIRST_NUMBER + SECOND_NUMBER
             elif OP == '/':
-                NUMBER_MESSAGE = int(FIRST_NUMBER) / int(SECOND_NUMBER)
+                NUMBER_MESSAGE = FIRST_NUMBER / SECOND_NUMBER
             else:
-                NUMBER_MESSAGE = int(FIRST_NUMBER) * int(SECOND_NUMBER)
+                NUMBER_MESSAGE = FIRST_NUMBER * SECOND_NUMBER
 
-            client_connect.send(NUMBER_MESSAGE.encode())
+            client_connect.send((str(NUMBER_MESSAGE).encode()))
 
-        except IndexError:
+        except ValueError:
             CLASS = results[0]
             STATUS = results[1]
             SECRET_FLAG = results[2]
