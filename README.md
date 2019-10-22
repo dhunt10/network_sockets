@@ -1,5 +1,5 @@
 # network_sockets
-## By Darin Hunt
-
+## Created by Darin Hunt, all credit should be given to him.
+#### Not to be used by anyone else
 - [x] created
-- [ ] tested
+- [x] tested
