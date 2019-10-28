@@ -3,6 +3,7 @@
 #### Not to be used by anyone else
 - [x] created
 - [x] tested
+- [x] works
 
 #### - This file is a client that connects to a server designed for a very specific purpose.
 #### - The main function first assigns a port and host address to their respective variables.
