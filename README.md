@@ -12,5 +12,5 @@
 #### - In the new function a while loop runs and connects continuously receives messages from the server
 #### - Once a message is received we extract two numbers and an operator inside of a try except
 #### - Depending on the numbers and operator we get we then return a response to the server
-#### - We continue to do this until the try except fails in which case we know we have found our BYE message
+#### - We continue to do this until the try except fails (ValueError) in which case we know we have found our BYE message
 #### - Finally we extract the secret flag from the bye message and break the while loop and end the program

@@ -58,6 +58,6 @@ def run_client(client_connect):
 
 if __name__ == '__main__':
     HOST = '129.10.33.207'
-    PORT = 12000
+    PORT = 12005
     CONNECTION = (HOST, PORT)
     print(configure_client())
